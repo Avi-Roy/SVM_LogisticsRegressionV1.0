@@ -43,6 +43,12 @@ def main():
         
         predit = load_model(model_name,user_data)
         st.success(f"Your IRIS class  is  {predit} ")
+        if predit == 'versicolor or class 1':
+            st.image('versicolor.jpeg')
+        elif predit == 'virginica or Class 2':
+            st.image('virginica.jpeg')
+        else :
+            st.image('setosa.jpeg')
               
 
 if __name__ == "__main__":
